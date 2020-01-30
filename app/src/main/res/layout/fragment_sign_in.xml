@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.signIn">
+
+    <ImageView
+        android:id="@+id/ik_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:src="@drawable/ik_metal_logo"
+        app:layout_constraintBottom_toTopOf="@+id/ik_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ik_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#312F2F"
+        android:text="@string/ik_logo_btn"
+        android:textColor="@android:color/darker_gray"
+        android:textStyle="bold"
+        style="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="@+id/ik_logo"
+        app:layout_constraintStart_toStartOf="@+id/ik_logo"
+        app:layout_constraintTop_toBottomOf="@+id/ik_logo" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:id="@+id/divider"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/lab_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ik_button"
+
+    />
+
+    <ImageView
+        android:id="@+id/lab_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:src="@drawable/lab_logo"
+        app:layout_constraintBottom_toTopOf="@+id/lab_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        />
+
+    <Button
+        android:id="@+id/lab_button"
+        style="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="@color/black"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:text="@string/lab_logo_btn"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/lab_logo"
+        app:layout_constraintStart_toStartOf="@+id/lab_logo"
+        app:layout_constraintTop_toBottomOf="@+id/lab_logo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

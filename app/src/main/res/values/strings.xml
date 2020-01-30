@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TheIronKitchen</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="ik_logo_btn">Eat</string>
+    <string name="lab_logo_btn">Train</string>
+    <string name="title_activity_ik_nav">IkNav</string>
+    <string name="title_home">Home</string>
+    <string name="title_meals">Meals</string>
+    <string name="title_lunch">Lunch</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_lab_nav">LabNav</string>
+</resources>
