@@ -9,64 +9,150 @@
     <ImageView
         android:id="@+id/ik_logo"
         android:layout_width="wrap_content"
-        android:layout_height="150dp"
+        android:layout_height="0dp"
         android:src="@drawable/ik_metal_logo"
-        app:layout_constraintBottom_toTopOf="@+id/ik_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="0.55" />
 
-    <Button
-        android:id="@+id/ik_button"
+
+    <EditText
+        android:id="@+id/emailText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:hint="email"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/passwordText"
+        app:layout_constraintEnd_toStartOf="@id/textEditRightAlign"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/textEditLeftAlign"
+        app:layout_constraintTop_toBottomOf="@id/guideline2" />
+
+    <EditText
+        android:id="@+id/passwordText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/signUpText"
+        app:layout_constraintEnd_toStartOf="@id/textEditRightAlign"
+        app:layout_constraintStart_toStartOf="@id/textEditLeftAlign"
+        app:layout_constraintTop_toBottomOf="@id/emailText" />
+
+    <TextView
+        android:id="@+id/signUpText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#312F2F"
-        android:text="@string/ik_logo_btn"
-        android:textColor="@android:color/darker_gray"
+        android:text="Need account?   Sign Up"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline5"
+        app:layout_constraintEnd_toStartOf="@id/textEditRightAlign"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/textEditLeftAlign"
+        app:layout_constraintTop_toTopOf="@+id/passwordText" />
+
+    <Button
+        android:id="@+id/logInBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="LOG IN"
         android:textStyle="bold"
-        style="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
-        app:layout_constraintBottom_toTopOf="@+id/divider"
-        app:layout_constraintEnd_toEndOf="@+id/ik_logo"
-        app:layout_constraintStart_toStartOf="@+id/ik_logo"
-        app:layout_constraintTop_toBottomOf="@+id/ik_logo" />
+        android:textColor="@color/black"
+        android:background="@drawable/custon_rounded_button"
+        app:layout_constraintBottom_toTopOf="@+id/guideLine3"
+        app:layout_constraintEnd_toStartOf="@+id/textEditRightAlign"
+        app:layout_constraintStart_toStartOf="@+id/textEditLeftAlign"
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
-    <View
-        android:layout_width="0dp"
-        android:layout_height="3dp"
-        android:id="@+id/divider"
-        android:background="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/lab_logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ik_button"
-
-    />
+    <TextView
+        android:id="@+id/skip_text_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skip"
+        android:textColor="@color/grey"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/textEditRightAlign"
+        app:layout_constraintTop_toBottomOf="@id/guideLine3"
+        app:layout_constraintVertical_bias="0.495" />
 
     <ImageView
-        android:id="@+id/lab_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="150dp"
-        android:src="@drawable/lab_logo"
-        app:layout_constraintBottom_toTopOf="@+id/lab_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider"
-        />
+        android:id="@+id/skip_knifes_arrow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/knives_arrow_right"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="h,19:17"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/guideLine3" />
 
-    <Button
-        android:id="@+id/lab_button"
-        style="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:shadowColor="@color/black"
-        android:shadowDx="5"
-        android:shadowDy="5"
-        android:text="@string/lab_logo_btn"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/lab_logo"
-        app:layout_constraintStart_toStartOf="@+id/lab_logo"
-        app:layout_constraintTop_toBottomOf="@+id/lab_logo" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.36" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.83" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/textEditLeftAlign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/textEditRightAlign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7542579" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8832117" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.63201094" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
