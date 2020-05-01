@@ -18,6 +18,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.example.theironkitchen.view.IkNav;
 import com.example.theironkitchen.R;
 
@@ -39,28 +41,27 @@ public class signIn extends Fragment implements View.OnClickListener{
         signUp = daView.findViewById(R.id.signUpText);
         logInBtn = daView.findViewById(R.id.logInBtn);
         skipImgBtn = daView.findViewById(R.id.skip_knifes_arrow);
-        String signUpString = "Need account? Sign-Up";
-        SpannableString sText = new SpannableString(signUpString);
-        sText.setSpan(new UnderlineSpan(),14, 21, 0);
+        SpannableString sText = new SpannableString(signUp.getText().toString());
+        sText.setSpan(new UnderlineSpan(),0, sText.length(), 0);
         ForegroundColorSpan fcsBlue = new ForegroundColorSpan(Color.BLUE);
-        sText.setSpan(fcsBlue, 14, 21, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        ClickableSpan signUpClickSpan = new ClickableSpan() {
-            @Override
-            public void onClick(@NonNull View widget) {
-                final FragmentManager signUpFM = getActivity().getSupportFragmentManager();
-                signUpFM.beginTransaction().replace(R.id.content, new signUp()).commit();
-            }
-        };
-        sText.setSpan(signUpClickSpan, 14, 21, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        sText.setSpan(fcsBlue, 0, sText.length(), 0);
         signUp.setText(sText);
+        signUp.setOnClickListener(this);
         logInBtn.setOnClickListener(this);
         skipImgBtn.setOnClickListener(this);
         return daView;
     }
 
     @Override
-    public void onClick(View v) {
-        final Intent homeIntent = new Intent(getActivity(), IkNav.class);
-        startActivity(homeIntent);
+    public void onClick(View view) {
+        if(view == logInBtn || view == skipImgBtn) {
+            final Intent homeIntent = new Intent(getActivity(), IkNav.class);
+            startActivity(homeIntent);
+
+        }
+        else if(view == signUp){
+            final FragmentManager signUpFM = getActivity().getSupportFragmentManager();
+            signUpFM.beginTransaction().replace(R.id.content, new signUp()).commit();
+        }
     }
 }
