@@ -1,4 +1,4 @@
-package com.example.theironkitchen.view;
+package com.example.theironkitchen.view.ui.signup;
 
 import android.os.Bundle;
 

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.signup.SignUpActivity">
+
+    <TextView
+        android:id="@+id/signUpText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SIGN UP"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textAppearance="@style/Theme.AppCompat.Light"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertR"
+        app:layout_constraintStart_toEndOf="@+id/guidelineVertL"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHeader"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/viewPagerSignUp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineFooter"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <ImageButton
+        android:id="@+id/prevButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/knives_arrow_left"
+        android:elevation="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineFooter"
+        app:layout_constraintEnd_toStartOf="@id/guidelineVertL"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/nxtButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/knives_arrow_right_dark"
+        android:elevation="20dp"
+        app:layout_constraintStart_toEndOf="@+id/guidelineVertR"
+        app:layout_constraintTop_toBottomOf="@id/guidelineFooter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="5dp"
+        android:text="SUBMIT"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guidelineVertR"
+        app:layout_constraintStart_toEndOf="@id/guidelineVertL"
+        app:layout_constraintTop_toBottomOf="@id/guidelineFooter" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineFooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8946648" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

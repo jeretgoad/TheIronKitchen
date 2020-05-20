@@ -1,12 +1,12 @@
 package com.example.theironkitchen.view;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 
 import com.example.theironkitchen.R;
+import com.example.theironkitchen.view.ui.login.signIn;
 
 public class MainActivity extends FragmentActivity {
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.signUp">
+    tools:context=".view.ui.signup.signUp">
 
 
     <ImageView
@@ -81,16 +81,16 @@
         app:layout_constraintBottom_toTopOf="@id/guidelineFooter"
         />
 
-    <Button
+    <ImageButton
         android:id="@+id/confirmBtn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Confirm"
-        app:layout_constraintTop_toBottomOf="@id/guidelineFooter"
+        android:layout_height="0dp"
+        android:background="@drawable/custom_sign_up_knive_buttons"
+        android:src="@drawable/knives_arrow_right"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline7"
         app:layout_constraintEnd_toEndOf="@id/guidelineAlignR"
         app:layout_constraintStart_toEndOf="@id/guidelineAlignL"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@id/guideline8" />
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineHeaderTop"
         android:layout_width="wrap_content"
@@ -125,5 +125,19 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="706dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.88" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

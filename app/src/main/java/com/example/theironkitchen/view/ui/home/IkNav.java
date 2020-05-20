@@ -1,4 +1,4 @@
-package com.example.theironkitchen.view;
+package com.example.theironkitchen.view.ui.home;
 
 import android.os.Bundle;
 

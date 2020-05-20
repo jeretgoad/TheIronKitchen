@@ -1,14 +1,12 @@
-package com.example.theironkitchen.view;
+package com.example.theironkitchen.view.ui.login;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import android.text.SpannableString;
-import android.text.Spanned;
-import android.text.style.ClickableSpan;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.UnderlineSpan;
 import android.view.LayoutInflater;
@@ -18,10 +16,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.theironkitchen.view.IkNav;
 import com.example.theironkitchen.R;
+import com.example.theironkitchen.view.ui.home.IkNav;
+import com.example.theironkitchen.view.ui.signup.signUp;
 
 
 public class signIn extends Fragment implements View.OnClickListener{
