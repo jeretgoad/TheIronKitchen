@@ -10,7 +10,7 @@
         android:id="@+id/ik_logo"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:src="@drawable/ik_metal_logo"
+        android:src="@drawable/ik_black_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintBottom_toTopOf="@id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
